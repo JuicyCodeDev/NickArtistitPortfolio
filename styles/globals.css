@@ -17,11 +17,11 @@ body {
   /* min-height: 400px; */
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .swiper {
     min-height: -webkit-fill-available;
   }
-}
+} */
 
 .swiper-slide {
   text-align: center;
