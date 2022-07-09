@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Burger Menu Icon */
 
 .menu_icon {
@@ -34,6 +41,8 @@
   height: 3px;
   background-color: var(--bar-bg, #000);
   border-radius: 3px;
+  -webkit-transition: all 0.25s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+  -o-transition: all 0.25s cubic-bezier(0.1, 0.82, 0.76, 0.965);
   transition: all 0.25s cubic-bezier(0.1, 0.82, 0.76, 0.965);
 }
 .menu_icon span:first-of-type {
@@ -44,29 +53,19 @@
 }
 .menu_icon.active span:first-of-type,
 .menu_icon .menu_icon__cheeckbox:checked + div span:first-of-type {
-  transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
+          transform: rotate(40deg);
   margin-left: 10px;
   width: 40px;
   top: 5px;
 }
 .menu_icon.active span:last-of-type,
 .menu_icon .menu_icon__cheeckbox:checked + div span:last-of-type {
-  transform: rotate(-40deg);
+  -webkit-transform: rotate(-40deg);
+      -ms-transform: rotate(-40deg);
+          transform: rotate(-40deg);
   margin-left: 10px;
   bottom: 8px;
   width: 40px;
-}
-
-
-
-
-
-.slidingMenu {
-  width: 100vw;
-  height: calc(100vh - 60px);
-  background-color: black;
-  margin-top: 60px;
-  position: absolute;
-  z-index: 100;
-  transition: all 2s;
 }
