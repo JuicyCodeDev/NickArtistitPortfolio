@@ -1,0 +1,18 @@
+.container {
+  position: block;
+}
+
+.paintingContainer {
+  margin-left: 20px;
+}
+
+.paintingInfo {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  margin-right: 20px;
+}
+
+.paintingName {
+  font-weight: 600;
+}

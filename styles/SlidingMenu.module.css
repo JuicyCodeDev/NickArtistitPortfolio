@@ -1,0 +1,39 @@
+.slidingMenu {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* margin-top: 60px; */
+  position: absolute;
+  z-index: 9;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 22px;
+  font-weight: 200;
+  letter-spacing: 0.025em;
+}
+
+.slidingMenu > div {
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+.fontAwesomeIcon {
+  margin-top: 10% !important;
+  font-size: 45px;
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 15px;
+  font-size: 10px;
+}
