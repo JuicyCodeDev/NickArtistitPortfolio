@@ -17,12 +17,6 @@ body {
   /* min-height: 400px; */
 }
 
-@media (max-width: 500px) {
-  .swiper {
-    height: 90vh;
-  }
-}
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -61,4 +55,10 @@ body {
   margin-bottom: 10px !important;
   width: 7px !important;
   height: 7px !important;
+}
+
+@media (max-width: 500px) {
+  .swiper-pagination-bullet {
+    margin-bottom: 50px !important;
+  }
 }
