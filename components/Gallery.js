@@ -19,6 +19,7 @@ const Gallery = () => {
       <Swiper
         direction={'horizontal'}
         slidesPerView={1}
+        loop={true}
         pagination={{
           clickable: true,
           bulletActiveClass: 'swiper-pagination-bullet-active',

@@ -14,7 +14,7 @@ body {
 .swiper {
   width: 100vw;
   height: 100vh;
-  min-height: 700px;
+  min-height: 400px;
 }
 
 .swiper-slide {
