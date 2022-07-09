@@ -30,7 +30,7 @@ const Gallery = () => {
       >
         <SwiperSlide>
             <div className={styles.paintingContainer}>
-              <Image src='/../public/paintings/Karajan.png' alt='Painting of the conductor Karajan' width={727} height={586}/>
+              <Image src='/paintings/Karajan.png' alt='Painting of the conductor Karajan' width={727} height={586}/>
               <div className={styles.paintingInfo}><span className={styles.paintingName}>Karajan&nbsp;</span> 190 x 160 cm&nbsp; 2016</div>
             </div>
         </SwiperSlide>
