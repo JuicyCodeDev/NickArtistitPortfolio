@@ -15,6 +15,7 @@ const SlidingMenu = ({toggleMenu, menuOpen}) => {
 
   const showWhenVisable = {
     transform: menuOpen ? 'translateY(0px)' : `translateY(-${height}px)`,
+    height: height,
     transition: 'all .75s ease',
     backdropFilter: 'blur(45px)',
   }
