@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from '../styles/Gallery.module.css'
+import { useEffect, useState } from 'react';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,8 +15,18 @@ import { Mousewheel, Pagination, Navigation } from 'swiper';
 
 const Gallery = () => {
 
+  const [height, setHeight] = useState(null);
+
+  useEffect(() => {
+    setHeight(window.innerHeight);
+  },[]);
+
+  const conainerStyle = {
+    height: `${height}px`,
+  }
+
   return ( 
-    <>
+    <div style={conainerStyle}>
       <Swiper
         direction={'horizontal'}
         slidesPerView={1}
@@ -44,7 +55,7 @@ const Gallery = () => {
         <SwiperSlide>Slide 8</SwiperSlide>
         <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
-    </>
+    </div>
    );
 }
  
