@@ -1,13 +1,20 @@
 import Link from 'next/link';
 import styles from '../styles/SlidingMenu.module.css'
+import { useState, useEffect } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const SlidingMenu = ({toggleMenu, menuOpen}) => {
 
+  const [height, setHeight] = useState(null);
+
+  useEffect(() => {
+    setHeight(window.innerHeight);
+  },[]);
+
   const showWhenVisable = {
-    transform: menuOpen ? 'translateY(0vh)' : 'translateY(-100vh)',
+    transform: menuOpen ? 'translateY(0px)' : `translateY(-${height}px)`,
     transition: 'all .75s ease',
     backdropFilter: 'blur(45px)',
   }
