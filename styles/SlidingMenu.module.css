@@ -37,6 +37,7 @@
 @media (max-width: 500px) {
   .slidingMenu > div {
     margin-top: 15%;
+    font-weight: 400;
   }
 
   .fontAwesomeIcon {
