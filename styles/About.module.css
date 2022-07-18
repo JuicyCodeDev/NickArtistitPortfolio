@@ -115,7 +115,7 @@
     overflow: visible;
     transform: translateY(15%);
     transition: all 0.5s;
-    text-align: center;
+    text-align: start;
     box-sizing: border-box;
   }
 
