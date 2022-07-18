@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import styles from '../styles/About.module.css'
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const About = () => {
 
@@ -15,10 +15,6 @@ const About = () => {
       setButtonLabel("read more")
     }
   }
-
-  // const aboutContainer_style = {
-  //   transform: visible ? "translateY(0%)" : "translateY(15%)",
-  // }
 
   const extendedText_style = {
     display: visible ? "block" : "none",

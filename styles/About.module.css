@@ -120,8 +120,13 @@
   }
 
   .heading {
+    text-align: center;
     font-size: 26px;
     margin-bottom: 30px;
+  }
+
+  .extendedText {
+    animation: slideIn 0.25s linear alternate;
   }
 
   .buttonContainer {
@@ -134,4 +139,16 @@
     font-size: 12px;
   }
 
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
