@@ -1,0 +1,164 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 32px;
+}
+
+.main_container {
+  height: calc(100vh - 60px);
+  width: 90%;
+  max-width: 1100px;
+  position: block;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.image {
+  width: 414px;
+  height: 530px;
+  object-fit: cover;
+  object-position: 20% center;
+}
+
+.about {
+  height: 530px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 98px;
+  overflow: scroll;
+  transition: all 0.5s;
+}
+
+.about_open {
+  transform: translateY(0%);
+}
+
+.heading {
+  font-weight: 500;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.heading_mobile {
+  display: none;
+}
+
+.introText {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.extendedText {
+  margin-top: 50px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  display: none;
+}
+
+.buttonContainer {
+  margin-top: 62px;
+  display: flex;
+}
+
+.button:first-child {
+  margin-right: 10%;
+}
+
+.button {
+  padding: 8px 30px 8px 30px;
+  border: 2.5px solid #000000;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.1s;
+  text-align: center;
+}
+
+@media (max-width: 1050px) {
+  .about {
+    transform: translateY(0%);
+  }
+}
+
+@media (max-width: 880px) {
+  .main_container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .image {
+    height: 100%;
+    max-width: 90%;
+    object-fit: cover;
+    object-position: 20% center;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  .about {
+    width: 90%;
+    margin: 0px auto 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: visible;
+    transform: translateY(15%);
+    transition: all 0.5s;
+    text-align: start;
+    box-sizing: border-box;
+  }
+
+  .heading {
+    display: none;
+  }
+
+  .heading_mobile {
+    display: block;
+    font-weight: 500;
+    font-size: 26px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  .extendedText {
+    animation: slideIn 0.25s linear alternate;
+  }
+
+  .buttonContainer {
+    justify-content: center;
+    padding-bottom: 62px;
+    margin-top: 40px;
+  }
+
+  .button {
+    font-size: 12px;
+  }
+
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
