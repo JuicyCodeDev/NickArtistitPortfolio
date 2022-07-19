@@ -136,6 +136,9 @@
     margin-top: 40px;
   }
 
+  .introText {
+    font-size: 16px;
+  }
 
   .buttonContainer {
     justify-content: center;
