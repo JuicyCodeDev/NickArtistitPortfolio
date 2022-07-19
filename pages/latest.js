@@ -1,29 +1,12 @@
 import styles from '../styles/Latest.module.css'
 import { useState } from 'react';
 
-const About = () => {
-
-  const [visible, setVisiblitly] = useState(false);
-  const [buttonLabel, setButtonLabel] = useState("read more")
-
-  const show_extendedText = () => {
-    setVisiblitly(!visible);
-    if (visible === false) {
-      setButtonLabel("read less")
-    } else {
-      setButtonLabel("read more")
-    }
-  }
-
-  const extendedText_style = {
-    display: visible ? "block" : "none",
-  }
+const Latest = () => {
 
   return (  
     <div className={styles.main_container}>
-      <div className={styles.heading_mobile}>Serie “Krieg”</div>
       <img className={styles.image} src='/paintings/Soldat.png'/>
-      <div className={`${styles.about} ${visible ? styles.about_open : ""}`}>
+      <div className={styles.about}>
         <div className={styles.heading}>Serie “Krieg”</div>
         <div className={styles.introText}>
         Zur Zeit arbeite ich an einer Serie, angelehnt an die Form der Sinfonie in der klassischen Musik. Die Serie lässt sich, wie eine Sinfonie (meistens) in 4 Sätze einteilen:
@@ -48,4 +31,4 @@ const About = () => {
     </div> );
 }
  
-export default About;
+export default Latest;
