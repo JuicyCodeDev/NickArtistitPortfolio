@@ -42,7 +42,7 @@ const About = () => {
         <br/>
         <br/>
           IV. Satz
-          "Großes" Finale. Allumfassender Abschluss.
+          &quot;Großes&quot; Finale. Allumfassender Abschluss.
         </div>
       </div>
     </div> );
