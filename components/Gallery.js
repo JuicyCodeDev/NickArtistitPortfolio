@@ -41,13 +41,23 @@ const Gallery = () => {
         className='mySwiper'
       >
         <SwiperSlide>
-            <div className={styles.paintingContainer}>
-              <Image src='/paintings/Karajan.png' alt='Painting of the conductor Karajan' width={727} height={586}/>
-              <div className={styles.paintingInfo}><span className={styles.paintingName}>Karajan&nbsp;</span> 190 x 160 cm&nbsp; 2016</div>
-            </div>
+          <div className={styles.horizontal_painting}>
+            <img className={styles.painting} src='/paintings/Karajan.png' alt='Painting of the conductor Karajan' />
+          <div className={styles.paintingInfo}><span className={styles.paintingName}>Karajan&nbsp;</span> 190 x 160 cm&nbsp; 2016</div>
+          </div>
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.vertical_painting}>
+            <img className={styles.painting} src='/paintings/September.png' alt='Painting of the conductor Karajan' />
+            <div className={styles.paintingInfo}><span className={styles.paintingName}>September&nbsp;</span> 100 x 70 cm&nbsp; 2019</div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.horizontal_painting}>
+            <img className={styles.painting} src='/paintings/Karajan.png' alt='Painting of the conductor Karajan' />
+            <div className={styles.paintingInfo}><span className={styles.paintingName}>Karajan&nbsp;</span> 190 x 160 cm&nbsp; 2016</div>
+          </div>
+        </SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>
         <SwiperSlide>Slide 5</SwiperSlide>
         <SwiperSlide>Slide 6</SwiperSlide>

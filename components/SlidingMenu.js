@@ -27,7 +27,7 @@ const SlidingMenu = ({toggleMenu, menuOpen}) => {
       <Link href="/latest"><div onClick={toggleMenu}>Latest</div></Link>
       <Link href="/contact"><div onClick={toggleMenu}>Contact</div></Link>
       <div className={styles.fontAwesomeIcon}>
-        <FontAwesomeIcon icon={faInstagram} />
+        <a href="https://www.instagram.com/nikita_schomerus/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
       </div>
       <Link href="/impressumDatenschutz">
         <div onClick={toggleMenu} className={styles.footer}>

@@ -1,9 +1,26 @@
-.container {
-  position: block;
+
+.horizontal_painting {
+  width: 100%;
+  max-width: 750px;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
 }
 
-.paintingContainer {
-  margin-left: 20px;
+.vertical_painting {
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+}
+
+.painting {
+  height: 100%;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
 .paintingInfo {
