@@ -7,7 +7,7 @@ const Contact = () => {
 
   return (  
     <div className={styles.main_container}>
-      <img className={styles.image} src='/about_image.png'/>
+      <img className={styles.image} src='/about_image.png' alt='Ein Bild von Nikita Schomerus'/>
       <div className={styles.about}>
         <div className={styles.heading_container}>
           <div className={styles.heading}>Get in touch</div>

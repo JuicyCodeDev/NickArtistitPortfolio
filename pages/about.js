@@ -1,6 +1,5 @@
 import styles from '../styles/About.module.css'
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const About = () => {
 
@@ -22,7 +21,7 @@ const About = () => {
 
   return (  
     <div className={styles.main_container}>
-      <img className={styles.image} src='/about_image.png'/>
+      <img className={styles.image} src='/about_image.png' alt='Ein Bild von Nikita Schomerus'/>
       <div className={`${styles.about} ${visible ? styles.about_open : ""}`}>
         <div className={styles.heading}>Intuitive Paintings inspired by classical music</div>
         <div className={styles.introText}>Für die Umsetzungen benutze ich nur wenige Skizzen für ein Grundgerüst und grundsätzlich keine Fotografien. In meinen Augen beraubt jegliches Abzeichnen von Momentaufnahmen das Bild an Dynamik und Wirklichkeit. Ich kratze das Bild aus dem Kopf auf die Leinwand. In diesem Prozess ändert sich Vieles, durch Zufall oder neue Einfälle – am Ende dient alles dem Motiv und seiner emotionalen Welt.</div>
