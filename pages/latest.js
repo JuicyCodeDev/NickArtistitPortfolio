@@ -2,11 +2,8 @@ import styles from '../styles/Latest.module.css'
 import Link from 'next/link';
 
 const Latest = ({ feed }) => {
-  const insta_images = feed.data;
-  console.log(insta_images)
-  
-  const insta_test_collection = insta_images.filter(image => image.media_type === "IMAGE")
-
+  // const insta_images = feed.data;  
+  // const insta_test_collection = insta_images.filter(image => image.media_type === "IMAGE")
 
   return (  
     <>
@@ -52,7 +49,7 @@ const Latest = ({ feed }) => {
     <div className={styles.insta_description}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis quam, scelerisque in velit sed, pellentesque tempor ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
     </div>
-    <div className={styles.insta_container}>
+    {/* <div className={styles.insta_container}>
       {
         insta_test_collection && insta_test_collection.map((image) => (
           <div key={image.id} className={styles.insta_image_container}>
@@ -62,21 +59,21 @@ const Latest = ({ feed }) => {
           </div>
         ))
       }
-    </div>
+    </div> */}
     </>
     );
 }
  
 export default Latest;
 
-export const getStaticProps = async () => {
-  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTA_TOKEN}`;
-  const data = await fetch(url);
-  const feed = await data.json();
+// export const getStaticProps = async () => {
+//   const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTA_TOKEN}`;
+//   const data = await fetch(url);
+//   const feed = await data.json();
 
-  return {
-    props: {
-      feed,
-    }
-  }
-}
+//   return {
+//     props: {
+//       feed,
+//     }
+//   }
+// }
