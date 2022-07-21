@@ -28,12 +28,6 @@ a {
   height: 100%;
 }
 
-/* @media (max-width: 500px) {
-  .swiper {
-    height: 100%;
-  }
-} */
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
