@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from '../styles/Gallery.module.css'
 import { useEffect, useState, useLayoutEffect } from 'react';
 
