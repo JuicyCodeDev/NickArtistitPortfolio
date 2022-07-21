@@ -52,11 +52,6 @@ a {
   align-items: center;
 }
 
-/* .swiper-slide img {
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-} */
 
 .swiper-pagination-bullet-active {
   background: black !important;

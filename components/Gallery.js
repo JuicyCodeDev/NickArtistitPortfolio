@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from '../styles/Gallery.module.css'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useLayoutEffect } from 'react';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,11 +15,7 @@ import { Mousewheel, Pagination, Navigation } from 'swiper';
 
 const Gallery = () => {
 
-  const [height, setHeight] = useState(null);
-
-  useEffect(() => {
-    setHeight(window.innerHeight);
-  },[]);
+  const height = useWindowHeight();
 
   const conainerStyle = {
     height: `${height}px`,
@@ -41,19 +37,19 @@ const Gallery = () => {
         className='mySwiper'
       >
         <SwiperSlide>
-          <div className={styles.horizontal_painting}>
+          <div className={styles.painting_wrapper}>
             <img className={styles.painting} src='/paintings/Karajan.png' alt='Painting of the conductor Karajan' />
           <div className={styles.paintingInfo}><span className={styles.paintingName}>Karajan&nbsp;</span> 190 x 160 cm&nbsp; 2016</div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.vertical_painting}>
+          <div className={styles.painting_wrapper}>
             <img className={styles.painting} src='/paintings/September.png' alt='Painting of the conductor Karajan' />
             <div className={styles.paintingInfo}><span className={styles.paintingName}>September&nbsp;</span> 100 x 70 cm&nbsp; 2019</div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.horizontal_painting}>
+          <div className={styles.painting_wrapper}>
             <img className={styles.painting} src='/paintings/Karajan.png' alt='Painting of the conductor Karajan' />
             <div className={styles.paintingInfo}><span className={styles.paintingName}>Karajan&nbsp;</span> 190 x 160 cm&nbsp; 2016</div>
           </div>
@@ -67,6 +63,19 @@ const Gallery = () => {
       </Swiper>
     </div>
    );
-}
+  }
+
+  function useWindowHeight() {
+    const [height, setSize] = useState(0);
+    useLayoutEffect(() => {
+      function updateHeight() {
+        setSize(window.innerHeight);
+      }
+      window.addEventListener('resize', updateHeight);
+      updateHeight();
+      return () => window.removeEventListener('resize', updateHeight);
+    }, []);
+    return height;
+  }
  
 export default Gallery;
