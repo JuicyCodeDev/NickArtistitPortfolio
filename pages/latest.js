@@ -12,7 +12,7 @@ const Latest = ({ feed }) => {
     <>
     <div className={styles.main_container}>
       <div className={styles.image_container}>
-        <img className={styles.image} src='/paintings/Soldat.png'/>
+        <img className={styles.image} src='/paintings/Soldat.png' alt='Ein Soldat'/>
         <div className={styles.image_title}>
           Mama, Papa, Bruder 200x130cm (2020)  
           <br/>
