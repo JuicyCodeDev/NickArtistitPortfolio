@@ -38,7 +38,7 @@
   flex-direction: column;
   justify-content: flex-start;
   margin-left: 98px;
-  overflow: scroll;
+  overflow: auto;
   transform: translateY(15%);
   transition: all 0.5s;
 }
