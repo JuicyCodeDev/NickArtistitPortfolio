@@ -45,6 +45,29 @@
   font-size: 45px;
 }
 
+/* Footer */
+
+.footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 15px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  transition: all 0.1;
+}
+
+.footer:hover {
+  font-size: 9.25px;
+}
+
+
 @media (max-width: 500px) {
   .slidingMenu > div {
     margin-top: 15%;
@@ -54,28 +77,8 @@
   .fontAwesomeIcon {
     margin-top: 15% !important;
   }
+
+  .footer {
+    letter-spacing: 0.75px;
+  }
 }
-
-/* Footer */
-
-.footer {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  bottom: 15px;
-  font-size: 9px;
-  font-weight: 600;
-  transition: all 0.1s;
-  letter-spacing: 1.5px;
-  transition: all 0.1;
-}
-
-.footer:hover {
-  font-size: 9.25px;
-}
-
