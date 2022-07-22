@@ -47,12 +47,12 @@
 
 @media (max-width: 500px) {
   .slidingMenu > div {
-    margin-top: 15%;
+    margin-top: 20%;
     font-weight: 500;
   }
 
   .fontAwesomeIcon {
-    margin-top: 25% !important;
+    margin-top: 20% !important;
   }
 }
 
