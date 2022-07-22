@@ -36,7 +36,7 @@
   flex-direction: column;
   justify-content: center;
   margin-left: 98px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .heading {
@@ -168,7 +168,8 @@
   .insta_heading {
     font-size: 26px;
     margin-bottom: 40px;
-    margin-top: 60px;
+    margin-top: 40px;
+    padding-top: 0px;
   }
 
   .insta_image_container {
@@ -181,4 +182,8 @@
   .insta_image_container {
     width: 100%;
   }
+
+  .text {
+    text-align: start;
+  } 
 }
