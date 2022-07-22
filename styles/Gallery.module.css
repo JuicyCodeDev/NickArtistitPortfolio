@@ -1,6 +1,6 @@
 .painting_wrapper {
   width: 90%;
-  height: 70%;
+  height: 72.5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,4 +25,15 @@
 
 .paintingName {
   font-weight: 600;
+}
+
+@media (max-width: 500px) {
+  .painting_wrapper {
+    width: 90%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+  }  
 }

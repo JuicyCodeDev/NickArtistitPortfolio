@@ -49,16 +49,16 @@ const Gallery = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.painting_wrapper}>
-            <img className={styles.painting} src='/paintings/Karajan.png' alt='Painting of the conductor Karajan' />
-            <div className={styles.paintingInfo}><span className={styles.paintingName}>Karajan&nbsp;</span> 190 x 160 cm&nbsp; 2016</div>
+            <img className={styles.painting} src='/paintings/Vater.png' alt='Painting of the conductor Karajan' />
+            <div className={styles.paintingInfo}><span className={styles.paintingName}>Vater&nbsp;</span> 190 x 143 cm&nbsp; 2017</div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.painting_wrapper}>
+            <img className={styles.painting} src='/paintings/Soldat.png' alt='Painting of the conductor Karajan' />
+            <div className={styles.paintingInfo}><span className={styles.paintingName}>Mama, Papa, Bruder  &nbsp;</span> 200 x 130 cm&nbsp; 2020</div>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </div>
    );

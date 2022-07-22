@@ -1,8 +1,8 @@
 .slidingMenu {
   transform: translateY(-100vh);
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.9);
-  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
   z-index: 9;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,16 +17,27 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 22px;
-  font-weight: 300;
+  color: rgba(255, 255, 255);
   letter-spacing: 0.025em;
+  backdrop-filter: blur(45px);
 }
 
 .slidingMenu > div {
   margin-top: 5%;
   cursor: pointer;
+}
+
+.menu_item {
+  opacity: 0.95;
+  transition: all 0.1s;
+  font-weight: 500;
+  font-size: 24px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu_item:hover {
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 .fontAwesomeIcon {
@@ -57,5 +68,14 @@
           justify-content: center;
   position: absolute;
   bottom: 15px;
-  font-size: 10px;
+  font-size: 9px;
+  font-weight: 600;
+  transition: all 0.1s;
+  letter-spacing: 1.5px;
+  transition: all 0.1;
 }
+
+.footer:hover {
+  font-size: 9.25px;
+}
+

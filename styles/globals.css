@@ -62,7 +62,7 @@ a {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  margin-bottom: 10px !important;
+  margin-bottom: 0px !important;
   width: 7px !important;
   height: 7px !important;
 }
