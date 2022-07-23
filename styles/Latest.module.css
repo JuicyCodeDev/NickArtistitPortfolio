@@ -1,5 +1,3 @@
-/* Desktop Version */
-
 .main_container {
   height: calc(90vh - 60px);
   width: 90%;
@@ -68,16 +66,29 @@
 @media (max-width: 880px) {
 
   .main_container {
-    width: initial;
+    width: 100%;
     height: initial;
-    margin: auto;
-    flex-direction: column-reverse;
-    align-items: center;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+
+.image_container {
+    width: 100vw;
+    height: initial;
+  }
+
+  .image {
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .image_title {
+    display: none;
   }
 
   .text_container {
     height: initial;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,36 +110,9 @@
     text-align: center;
   } 
 
-  .image_container {
-    width: 100%;
-    height: initial;
-    padding-left: 20px;
-    margin-bottom: 40px;
-  }
-
-  .image {
-    width: 80%;
-    object-fit: contain;
-    object-position: 50% 50%;
-    display: block;
-    margin: 0px auto 0px auto;
-  }
-
   .more_button {
     display: none;
   }
-
-  .insta_heading {
-    font-size: 26px;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    padding-top: 0px;
-  }
-
-  .insta_image_container {
-    width: 40%;
-  }
-
 }
 
 @media (max-width: 500px) {

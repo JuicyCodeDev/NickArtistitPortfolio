@@ -54,6 +54,11 @@
     padding-top: 0px;
   }
 
+  .insta_description {
+    text-align: start;
+    width: 90%;
+  }
+
   .insta_image_container {
     width: 40%;
   }
