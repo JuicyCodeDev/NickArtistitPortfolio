@@ -1,9 +1,8 @@
 import styles from '../styles/Latest.module.css'
 import Link from 'next/link';
+import InstaSection from '../components/InstaSection';
 
 const Latest = ({ feed }) => {
-  // const insta_images = feed.data;  
-  // const insta_test_collection = insta_images.filter(image => image.media_type === "IMAGE")
 
   return (  
     <>
@@ -45,35 +44,21 @@ const Latest = ({ feed }) => {
       </div>
     </div> 
     <Link href="#insta_section"><a><div className={styles.more_button}>more</div></a></Link>
-    <div id="insta_section" className={styles.insta_heading}>Painting Meditation on Instagram</div>
-    <div className={styles.insta_description}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis quam, scelerisque in velit sed, pellentesque tempor ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-    </div>
-    {/* <div className={styles.insta_container}>
-      {
-        insta_test_collection && insta_test_collection.map((image) => (
-          <div key={image.id} className={styles.insta_image_container}>
-            <a href={image.permalink} rel="noreferrer" target="_blank">
-              <img src={image.media_url} alt={image.caption} className={styles.insta_image} />
-            </a>
-          </div>
-        ))
-      }
-    </div> */}
+    <InstaSection insta_feed={feed} />
     </>
     );
 }
  
 export default Latest;
 
-// export const getStaticProps = async () => {
-//   const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTA_TOKEN}`;
-//   const data = await fetch(url);
-//   const feed = await data.json();
+export const getStaticProps = async () => {
+  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTA_TOKEN}`;
+  const data = await fetch(url);
+  const feed = await data.json();
 
-//   return {
-//     props: {
-//       feed,
-//     }
-//   }
-// }
+  return {
+    props: {
+      feed,
+    }
+  }
+}
