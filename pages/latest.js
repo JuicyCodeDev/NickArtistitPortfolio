@@ -1,6 +1,6 @@
 import styles from '../styles/Latest.module.css'
 import Link from 'next/link';
-import InstaSection from '../components/InstaSection';
+// import InstaSection from '../components/InstaSection';
 
 const Latest = ({ feed }) => {
 
@@ -44,21 +44,21 @@ const Latest = ({ feed }) => {
       </div>
     </div> 
     <Link href="#insta_section"><a><div className={styles.more_button}>more</div></a></Link>
-    <InstaSection insta_feed={feed} />
+    {/* <InstaSection insta_feed={feed} /> */}
     </>
     );
 }
  
 export default Latest;
 
-export const getStaticProps = async () => {
-  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTA_TOKEN}`;
-  const data = await fetch(url);
-  const feed = await data.json();
+// export const getStaticProps = async () => {
+//   const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTA_TOKEN}`;
+//   const data = await fetch(url);
+//   const feed = await data.json();
 
-  return {
-    props: {
-      feed,
-    }
-  }
-}
+//   return {
+//     props: {
+//       feed,
+//     }
+//   }
+// }
