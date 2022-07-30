@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import styles from '../styles/Navbar.module.css';
-import BurgerMenuIcon from './BurgerMenuIcon';
+import { useState } from 'react'
+import styles from '../styles/Navbar.module.css'
+import BurgerMenuIcon from './BurgerMenuIcon'
 import SlidingMenu from './SlidingMenu'
+import Link from 'next/link'
 
 const Navbar = () => {
 
@@ -15,7 +16,7 @@ const Navbar = () => {
     <>
       <nav className={styles.navbar}>
         <div className={styles.container}>
-          <div className={styles.name}>NIKITA SCHOMERUS</div>
+          <Link href="/"><a><div className={styles.name}>NIKITA SCHOMERUS</div></a></Link>
           <BurgerMenuIcon toggleMenu={toggleMenu} menuOpen={menuOpen} /> 
         </div>
       </nav>

@@ -1,6 +1,10 @@
-import Layout from '../components/Layout';
-import '../styles/globals.css';
-import { motion } from 'framer-motion';
+import Layout from '../components/Layout'
+import '../styles/globals.css'
+import { motion } from 'framer-motion'
+import { config as fontawesomeConfig } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+fontawesomeConfig.autoAddCss = false;
 
 function MyApp({ Component, pageProps, router }) {
   return (

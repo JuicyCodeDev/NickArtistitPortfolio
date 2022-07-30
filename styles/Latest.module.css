@@ -21,6 +21,10 @@
   object-position: 20% center;
 }
 
+.image_mobile {
+  display: none;
+}
+
 .image_title {
   margin-top: 10px;
   font-size: 13px;
@@ -72,12 +76,17 @@
     /* align-items: center; */
   }
 
-.image_container {
+  .image_container {
     width: 100vw;
     height: initial;
   }
 
   .image {
+    display: none;
+  }
+
+  .image_mobile {
+    display: block;
     height: 350px;
     object-fit: cover;
   }

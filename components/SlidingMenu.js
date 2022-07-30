@@ -1,17 +1,13 @@
 import Link from 'next/link';
 import styles from '../styles/SlidingMenu.module.css'
-import { useState, useEffect } from 'react';
+import useWindowHeight from '../hooks/useWindowHeight'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 const SlidingMenu = ({toggleMenu, menuOpen}) => {
 
-  const [height, setHeight] = useState(null);
-
-  useEffect(() => {
-    setHeight(window.innerHeight);
-  },[]);
+  const height = useWindowHeight();
 
   const showWhenVisable = {
     height: height,
@@ -22,8 +18,8 @@ const SlidingMenu = ({toggleMenu, menuOpen}) => {
   return (
     <div style={showWhenVisable} className={styles.slidingMenu}>
       <Link href="/"><div onClick={toggleMenu} className={styles.menu_item}>Gallery</div></Link>
-      <Link href="/about"><div onClick={toggleMenu} className={styles.menu_item}>About</div></Link>
       <Link href="/latest"><div onClick={toggleMenu} className={styles.menu_item}>Latest</div></Link>
+      <Link href="/about"><div onClick={toggleMenu} className={styles.menu_item}>About</div></Link>
       <Link href="/contact"><div onClick={toggleMenu} className={styles.menu_item}>Contact</div></Link>
       <div className={styles.fontAwesomeIcon}>
         <a href="https://www.instagram.com/nikita_schomerus/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>

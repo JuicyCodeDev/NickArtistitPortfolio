@@ -7,6 +7,7 @@ const Layout = ({ children }) => {
     <>
       <Head>
         <title>Nikita Schomerus</title>
+        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       <Navbar />
       {children} 

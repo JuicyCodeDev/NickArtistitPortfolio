@@ -15,7 +15,7 @@ Schwedter Str. 31<br/>
 10435 Berlin<br/>
 DEUTSCHLAND<br/>
 <br/>
-Handy: 0177 2337443<br/>
+Handy: 017682337071<br/>
 E-Mail: mail@nikitaschomerus.de<br/>
 <br/>
 Alle Inhalte, Gemälde, Fotos, Grafiken und Texte unterliegen dem Urheberrecht und anderen Gesetzen zum Schutz des geistigen Eigentums.<br/>
