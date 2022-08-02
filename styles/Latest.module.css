@@ -3,22 +3,35 @@
   width: 90%;
   max-width: 1100px;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 60px;
 }
 
 .image_container {
   width: 414px;
   height: 530px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .image {
-  object-fit: cover;
-  object-position: 20% center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 20% center;
+     object-position: 20% center;
 }
 
 .image_mobile {
@@ -34,9 +47,16 @@
 .text_container {
   height: 100%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: 98px;
   overflow: auto;
 }
@@ -59,6 +79,8 @@
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
   transition: all 0.1s;
   text-align: center;
 }
@@ -70,7 +92,10 @@
   .main_container {
     width: 100%;
     height: initial;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     /* align-items: center; */
   }
 
@@ -86,7 +111,8 @@
   .image_mobile {
     display: block;
     height: 350px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .image_title {
@@ -96,9 +122,16 @@
   .text_container {
     height: initial;
     width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-left: initial;
     margin-bottom: 40px;
   }

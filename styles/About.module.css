@@ -3,32 +3,51 @@
   width: 90%;
   max-width: 1100px;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 60px;
 }
 
 .image {
   width: 414px;
   height: 530px;
-  object-fit: cover;
-  object-position: 20% center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 20% center;
+     object-position: 20% center;
 }
 
 .text_container {
   height: 530px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin-left: 98px;
   overflow: auto;
-  transform: translateY(15%);
+  -webkit-transform: translateY(15%);
+      -ms-transform: translateY(15%);
+          transform: translateY(15%);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .text_open {
-  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .heading {
@@ -37,6 +56,8 @@
 
 .button_container {
   margin-top: 62px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -50,41 +71,62 @@
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
   transition: all 0.1s;
   text-align: center;
 }
 
 @media (max-width: 1050px) {
   .text_container {
-    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
 @media (max-width: 950px) {
   .main_container {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
   }
 
   .image {
     width: 100%;
     height: 350px;
-    object-fit: cover;
-    object-position: 20% center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 20% center;
+       object-position: 20% center;
   }
 
   .text_container {
     width: 90%;
     height: 0%;
     margin: 40px auto 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     overflow: visible;
-    transform: translateY(15%);
+    -webkit-transform: translateY(15%);
+        -ms-transform: translateY(15%);
+            transform: translateY(15%);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
     text-align: start;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 
   .heading {
@@ -94,11 +136,14 @@
   }
 
   .extended_text {
-    animation: slideIn 0.25s linear alternate;
+    -webkit-animation: slideIn 0.25s linear alternate;
+            animation: slideIn 0.25s linear alternate;
   }
 
   .button_container {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-bottom: 62px;
     margin-top: 40px;
   }
@@ -109,14 +154,30 @@
 
 }
 
-@keyframes slideIn {
+@-webkit-keyframes slideIn {
   from {
-    transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
     opacity: 0;
   }
 
   to {
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 1;
   }
 }

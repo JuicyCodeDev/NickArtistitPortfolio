@@ -4,7 +4,6 @@ const InstaSection = ({ insta_feed }) => {
 
   const insta_feed_data = insta_feed.data;  
   const insta_image_collection = insta_feed_data.filter(image => image.media_type === "IMAGE")
-  console.log(insta_feed.data)
 
   return ( 
     <>
