@@ -1,4 +1,4 @@
-.slidingMenu {
+.main_container {
   transform: translateY(-100vh);
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.3);
@@ -22,7 +22,7 @@
   backdrop-filter: blur(45px);
 }
 
-.slidingMenu > div {
+.main_container > div {
   margin-top: 5%;
   cursor: pointer;
 }
@@ -40,9 +40,14 @@
   opacity: 1;
 }
 
-.fontAwesomeIcon {
+.icon_container {
   margin-top: 10% !important;
-  font-size: 45px;
+  font-size: 42px;
+}
+
+.icon_container > a {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* Footer */
@@ -69,12 +74,12 @@
 
 
 @media (max-width: 500px) {
-  .slidingMenu > div {
+  .main_container > div {
     margin-top: 15%;
     font-weight: 400;
   }
 
-  .fontAwesomeIcon {
+  .icon_container {
     margin-top: 15% !important;
   }
 

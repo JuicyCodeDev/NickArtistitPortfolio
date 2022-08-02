@@ -8,9 +8,9 @@ const InstaSection = ({ insta_feed }) => {
 
   return ( 
     <>
-      <div id="insta_section" className={styles.insta_heading}>Intuitive painting on Instagram</div>
-      <div className={styles.insta_description}>
-      My paintings represent experiences and impressions as well their emotional realities manifested in motives serving entirely themselves. The objective is a maximal engagement with sentiments and their execution on canvas. As part of this process I rely fully on my imagination and intuition and give space to coincidences.      </div>
+      <h1 id="insta_section" className={styles.heading}>Intuitive painting on Instagram</h1>
+      <p className={styles.description}>
+      My paintings represent experiences and impressions as well their emotional realities manifested in motives serving entirely themselves. The objective is a maximal engagement with sentiments and their execution on canvas. As part of this process I rely fully on my imagination and intuition and give space to coincidences.      </p>
       <div className={styles.insta_container}>
         {
           insta_image_collection && insta_image_collection.map((image) => (
@@ -23,7 +23,7 @@ const InstaSection = ({ insta_feed }) => {
         }
       </div>
     </>
-   );
+   )
 }
  
-export default InstaSection;
+export default InstaSection

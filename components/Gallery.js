@@ -1,21 +1,21 @@
 import styles from '../styles/Gallery.module.css'
 import useWindowHeight from '../hooks/useWindowHeight'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Mousewheel, Pagination, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import { Mousewheel, Pagination, Navigation } from 'swiper'
 
 const Gallery = ({ paintings }) => {
 
   // set container height to 100vh + resize automatically
   const height = useWindowHeight();
-  const conainerStyle = {
+  const mainContainer = {
     height: `${height}px`,
   }
 
   return ( 
-    <div style={conainerStyle}>
+    <div style={mainContainer}>
       <Swiper
         direction={'horizontal'}
         slidesPerView={1}

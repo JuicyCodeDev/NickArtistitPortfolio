@@ -16,7 +16,7 @@ const Navbar = () => {
     <>
       <nav className={styles.navbar}>
         <div className={styles.container}>
-          <Link href="/"><a><div className={styles.name}>NIKITA SCHOMERUS</div></a></Link>
+          <Link href="/"><a><div className={styles.name_logo}>NIKITA SCHOMERUS</div></a></Link>
           <BurgerMenuIcon toggleMenu={toggleMenu} menuOpen={menuOpen} /> 
         </div>
       </nav>

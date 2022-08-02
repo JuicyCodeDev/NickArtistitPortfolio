@@ -20,9 +20,9 @@ export async function getStaticProps() {
 
 const Home = ({ painting_data }) => {
   return (  
-    <div>
+    <>
       <Gallery paintings={painting_data} />
-    </div> );
+    </> );
 }
  
 export default Home;

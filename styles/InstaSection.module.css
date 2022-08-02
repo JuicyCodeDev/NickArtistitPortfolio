@@ -1,5 +1,5 @@
 
-.insta_heading {
+.heading {
   font-weight: 500;
   font-size: 32px;
   padding-top: 150px;
@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-.insta_description {
+.description {
   font-weight: 500;
   font-size: 14px;
   line-height: 25px;

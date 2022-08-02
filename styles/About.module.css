@@ -15,7 +15,7 @@
   object-position: 20% center;
 }
 
-.about {
+.text_container {
   height: 530px;
   width: 100%;
   display: flex;
@@ -27,31 +27,15 @@
   transition: all 0.5s;
 }
 
-.about_open {
+.text_open {
   transform: translateY(0%);
 }
 
 .heading {
-  font-weight: 500;
-  font-size: 32px;
   margin-bottom: 62px;
 }
 
-.introText {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 25px;
-}
-
-.extendedText {
-  margin-top: 50px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 25px;
-  display: none;
-}
-
-.buttonContainer {
+.button_container {
   margin-top: 62px;
   display: flex;
 }
@@ -71,7 +55,7 @@
 }
 
 @media (max-width: 1050px) {
-  .about {
+  .text_container {
     transform: translateY(0%);
   }
 }
@@ -89,7 +73,7 @@
     object-position: 20% center;
   }
 
-  .about {
+  .text_container {
     width: 90%;
     height: 0%;
     margin: 40px auto 0px;
@@ -109,11 +93,11 @@
     margin-bottom: 30px;
   }
 
-  .extendedText {
+  .extended_text {
     animation: slideIn 0.25s linear alternate;
   }
 
-  .buttonContainer {
+  .button_container {
     justify-content: center;
     padding-bottom: 62px;
     margin-top: 40px;

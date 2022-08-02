@@ -27,24 +27,14 @@
 
 .heading_container {
   display: flex;
-}
-
-.heading {
-  font-weight: 500;
-  font-size: 32px;
   margin-bottom: 62px;
+  align-items: center;
 }
 
-.fontAwesomeIcon {
+.icon {
   color: black;
   font-size: 32px;
   margin-left: 50px;
-}
-
-.introText {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 25px;
 }
 
 .buttonContainer {

@@ -21,12 +21,12 @@ export async function getStaticProps() {
 
 const About = ({ aboutPageContent }) => {
 
-  console.log(aboutPageContent[0].fields.image.fields.file.url)
+  const { image, heading, introText, extendedText } = aboutPageContent[0].fields;
 
   const [visible, setVisiblitly] = useState(false);
   const [buttonLabel, setButtonLabel] = useState("read more")
 
-  const show_extendedText = () => {
+  const showExtendedText = () => {
     setVisiblitly(!visible);
     if (visible === false) {
       setButtonLabel("read less")
@@ -35,23 +35,24 @@ const About = ({ aboutPageContent }) => {
     }
   }
 
-  const extendedText_style = {
+  const extendedTextStyle = {
     display: visible ? "block" : "none",
+    marginTop: "50px",
   }
 
   return (  
     <div className={styles.main_container}>
-      <img className={styles.image} src={'http:' + aboutPageContent[0].fields.image.fields.file.url} alt='Ein Bild von Nikita Schomerus'/>
-      <div className={`${styles.about} ${visible ? styles.about_open : ""}`}>
-        <div className={styles.heading}>{aboutPageContent[0].fields.heading}</div>
-        <div className={styles.introText}>{aboutPageContent[0].fields.introText}</div>
-        <div className={styles.extendedText} style={extendedText_style}>{aboutPageContent[0].fields.extendedText}</div>
-        <div className={styles.buttonContainer}>
-          <div className={styles.button} onClick={show_extendedText}>{buttonLabel}</div>
+      <img className={styles.image} src={'http:' + image.fields.file.url} alt='Ein Bild von Nikita Schomerus'/>
+      <div className={`${styles.text_container} ${visible ? styles.text_open : ""}`}>
+        <h1 className={styles.heading}>{heading}</h1>
+        <p>{introText}</p>
+        <p className={styles.extended_text} style={extendedTextStyle}>{extendedText}</p>
+        <div className={styles.button_container}>
+          <div className={styles.button} onClick={showExtendedText}>{buttonLabel}</div>
           <div className={styles.button}><a href={"mailto:mail@nikitaschomerus.de"}>get in touch</a></div>
         </div>
       </div>
-    </div> );
+    </div> )
 }
  
 export default About;
