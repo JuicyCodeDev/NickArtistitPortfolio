@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/Navbar.module.css';
 import BurgerMenuIcon from './BurgerMenuIcon.jsx';
-import SlidingMenu from './SlidingMenu';
+import SlidingMenu from './SlidingMenu.jsx';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
