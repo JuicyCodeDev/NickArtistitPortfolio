@@ -6,7 +6,6 @@ import useWindowHeight from '../hooks/useWindowHeight';
 
 const SlidingMenu = ({ toggleMenu, menuOpen }) => {
   const height = useWindowHeight();
-
   const showWhenVisable = {
     transform: menuOpen ? 'translateY(1px)' : `translateY(-${height}px)`,
     height,
