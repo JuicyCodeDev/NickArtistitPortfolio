@@ -23,6 +23,7 @@
   letter-spacing: 0.025em;
   -webkit-backdrop-filter: blur(45px);
           backdrop-filter: blur(45px);
+  transition: all .75s ease;
 }
 
 .main_container > div {

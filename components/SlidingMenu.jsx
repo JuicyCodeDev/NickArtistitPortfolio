@@ -8,9 +8,8 @@ const SlidingMenu = ({ toggleMenu, menuOpen }) => {
   const height = useWindowHeight();
 
   const showWhenVisable = {
-    height,
     transform: menuOpen ? 'translateY(1px)' : `translateY(-${height}px)`,
-    transition: 'all .75s ease',
+    height,
   };
 
   return (
