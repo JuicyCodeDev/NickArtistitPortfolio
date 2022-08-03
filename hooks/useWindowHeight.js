@@ -1,7 +1,7 @@
 import { useState, useLayoutEffect } from 'react';
 
 export default function useWindowHeight() {
-  const [height, setSize] = useState(undefined);
+  const [height, setSize] = useState(-1000);
   useLayoutEffect(() => {
     function updateHeight() {
       setSize(window.innerHeight);
