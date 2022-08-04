@@ -20,6 +20,7 @@ const Gallery = ({ paintings }) => {
         slidesPerView={1}
         loop
         pagination={{
+          dynamicBullets: true,
           clickable: true,
           bulletActiveClass: 'swiper-pagination-bullet-active',
           bulletClass: 'swiper-pagination-bullet',
