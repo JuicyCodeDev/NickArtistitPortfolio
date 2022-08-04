@@ -32,14 +32,18 @@ const Gallery = ({ paintings }) => {
           paintings.map((painting) => (
             <SwiperSlide key={painting.sys.id}>
               <div className={styles.painting_wrapper}>
-                <img className={styles.painting} src={`http:${painting.fields.imageFile.fields.file.url}`} alt="Painting of the conductor Karajan" />
+                <img
+                  className={styles.painting}
+                  src={`http:${painting.fields.imageFile.fields.file.url}`}
+                  alt={`A painting by Nikita Shomerus with the title ${painting.fields.title}`}
+                />
                 <div className={styles.paintingInfo}>
                   <span className={styles.paintingName}>
                     {painting.fields.title}
-&nbsp;
+                    &nbsp;
                   </span>
                   {painting.fields.size}
-&nbsp;
+                  &nbsp;
                   {painting.fields.year}
                 </div>
               </div>

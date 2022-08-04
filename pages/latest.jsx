@@ -28,7 +28,7 @@ export const getStaticProps = async () => {
 
 const Latest = ({ feed, latestPageContent }) => {
   const {
-    image, mobileImage, imageTitle, textTitle, richText,
+    image, mobileImage, textTitle, text,
   } = latestPageContent[0].fields;
 
   return (
@@ -36,17 +36,14 @@ const Latest = ({ feed, latestPageContent }) => {
       <div className={styles.main_container}>
         {/* Image */}
         <div className={styles.image_container}>
-          <img className={styles.image} src={`http:${image.fields.file.url}`} alt="Ein Soldat" />
-          <img className={styles.image_mobile} src={`http:${mobileImage.fields.file.url}`} alt="Ein Soldat" />
-          <div className={styles.image_title}>
-            {imageTitle}
-          </div>
+          <img className={styles.image} src={`http:${image.fields.file.url}`} alt={image.fields.title} />
+          <img className={styles.image_mobile} src={`http:${mobileImage.fields.file.url}`} alt={image.fields.title} />
         </div>
         {/* Text */}
         <div className={styles.text_container}>
           <h1 className={styles.heading}>{textTitle}</h1>
           <div className={styles.text}>
-            {documentToReactComponents(richText)}
+            {documentToReactComponents(text)}
           </div>
         </div>
       </div>
