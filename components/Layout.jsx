@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Navbar from './Navbar.jsx';
+import CookieConsent from './CookieConsent.jsx';
 
 const Layout = ({ children }) => (
   <>
@@ -9,6 +10,7 @@ const Layout = ({ children }) => (
     </Head>
     <Navbar />
     {children}
+    <CookieConsent />
   </>
 );
 
