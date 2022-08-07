@@ -10,22 +10,24 @@ const Impressum = () => (
       <b>Verantwortlich für den Inhalt dieser Seite:</b>
       <br />
       <br />
+      Angaben gemäß § 5 TMG
+      <br />
+      <br />
       Nikita Schomerus
       <br />
       Schwedter Str. 31
       <br />
       10435 Berlin
       <br />
-      DEUTSCHLAND
       <br />
+      Kontakt
       <br />
-      Handy: 017682337071
+      Telefon: +4917682337071
       <br />
       E-Mail: mail@nikitaschomerus.de
       <br />
       <br />
-      Alle Inhalte, Gemälde, Fotos, Grafiken und Texte unterliegen dem Urheberrecht und anderen Gesetzen zum Schutz des geistigen Eigentums.
-      <br />
+      Redaktionell verantwortlich: Nikita Schomerus
       <br />
       <br />
       <br />

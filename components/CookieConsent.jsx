@@ -35,8 +35,8 @@ const CookieConsent = () => {
   return (
     <div style={container} className={styles.container}>
       <div className={styles.text}>
-        We use third-party cookies to analyze web traffic.
-        <Link href="/"><a className={styles.link}>Read more about cookies.</a></Link>
+        We use cookies to enhance your browsing experience and to analyze our web traffic.
+        <Link href="/impressumDatenschutz"><a className={styles.link}>Read more about third-party cookies.</a></Link>
       </div>
       <div className={styles.buttonContainer}>
         <button
