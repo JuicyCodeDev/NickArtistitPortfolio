@@ -47,8 +47,8 @@ const Latest = ({ feed, latestPageContent }) => {
           </div>
         </div>
       </div>
-      <Link href="#insta_section"><a><div className={styles.more_button}>more</div></a></Link>
-      <InstaSection instaFeed={feed} />
+      {/* <Link href="#insta_section"><a><div className={styles.more_button}>more</div></a></Link>
+      <InstaSection instaFeed={feed} /> */}
     </>
   );
 };
