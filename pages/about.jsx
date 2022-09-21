@@ -41,7 +41,7 @@ const About = ({ aboutPageContent }) => {
 
   return (
     <div className={styles.main_container}>
-      <img className={styles.image} src={`http:${image.fields.file.url}`} alt={image.fields.title} />
+      <img className={styles.image} src={`https:${image.fields.file.url}`} alt={image.fields.title} />
       <div className={`${styles.text_container} ${visible ? styles.text_open : ''}`}>
         <h1 className={styles.heading}>{heading}</h1>
         <p>{introText}</p>
