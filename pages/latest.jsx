@@ -36,8 +36,8 @@ const Latest = ({ latestPageContent }) => {
       <div className={styles.main_container}>
         {/* Image */}
         <div className={styles.image_container}>
-          <img className={styles.image} src={`http:${image.fields.file.url}`} alt={image.fields.title} />
-          <img className={styles.image_mobile} src={`http:${mobileImage.fields.file.url}`} alt={image.fields.title} />
+          <img className={styles.image} src={`https:${image.fields.file.url}`} alt={image.fields.title} />
+          <img className={styles.image_mobile} src={`https:${mobileImage.fields.file.url}`} alt={image.fields.title} />
         </div>
         {/* Text */}
         <div className={styles.text_container}>

@@ -35,7 +35,7 @@ const Gallery = ({ paintings }) => {
               <div className={styles.painting_wrapper}>
                 <img
                   className={styles.painting}
-                  src={`http:${painting.fields.imageFile.fields.file.url}`}
+                  src={`https:${painting.fields.imageFile.fields.file.url}`}
                   alt={`A painting by Nikita Shomerus with the title ${painting.fields.title}`}
                 />
                 <div className={styles.paintingInfo}>
