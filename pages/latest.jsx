@@ -1,14 +1,14 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import { createClient } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import InstaSection from '../components/InstaSection.jsx';
+// import InstaSection from '../components/InstaSection.jsx';
 import styles from '../styles/Latest.module.css';
 
 export const getStaticProps = async () => {
   // Insta API call
-  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTA_TOKEN}`;
-  const data = await fetch(url);
-  const feed = await data.json();
+  // const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTA_TOKEN}`;
+  // const data = await fetch(url);
+  // const feed = await data.json();
 
   // Contentful API call
   const client = createClient({
@@ -20,13 +20,12 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      feed,
       latestPageContent: res.items,
     },
   };
 };
 
-const Latest = ({ feed, latestPageContent }) => {
+const Latest = ({ latestPageContent }) => {
   const {
     image, mobileImage, textTitle, text,
   } = latestPageContent[0].fields;
