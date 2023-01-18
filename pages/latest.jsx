@@ -9,36 +9,11 @@ import InstaSection from "../components/InstaSection.jsx";
 import styles from "../styles/Latest.module.css";
 
 // // Get data from instagram api with getstaticprops
-export async function getServerSideProps() {
-  const insta_res = await fetch(
-    `https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,permalink,timestamp,thumbnail_url&access_token=${process.env.INSTA_TOKEN}`
-  );
-  const feed = await insta_res.json();
-
-  // Contentful API call
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONENTFUL_ACCESS_KEY,
-  });
-
-  const contentful_res = await client.getEntries({
-    content_type: "latestPage",
-  });
-
-  return {
-    props: {
-      feed,
-      latestPageContent: contentful_res.items,
-    },
-  };
-}
-
-// export const getStaticProps = async () => {
-//   // Insta API call
-//   const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTA_TOKEN}`;
-//   const data = await fetch(url);
-//   const feed = await data.json();
-//   console.log(feed);
+// export async function getServerSideProps() {
+//   const insta_res = await fetch(
+//     `https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,permalink,timestamp,thumbnail_url&access_token=${process.env.INSTA_TOKEN}`
+//   );
+//   const feed = await insta_res.json();
 
 //   // Contentful API call
 //   const client = createClient({
@@ -46,15 +21,39 @@ export async function getServerSideProps() {
 //     accessToken: process.env.CONENTFUL_ACCESS_KEY,
 //   });
 
-//   const res = await client.getEntries({ content_type: "latestPage" });
+//   const contentful_res = await client.getEntries({
+//     content_type: "latestPage",
+//   });
 
 //   return {
 //     props: {
 //       feed,
-//       latestPageContent: res.items,
+//       latestPageContent: contentful_res.items,
 //     },
 //   };
-// };
+// }
+
+export const getStaticProps = async () => {
+  // Insta API call
+  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTA_TOKEN}`;
+  const data = await fetch(url);
+  const feed = await data.json();
+
+  // Contentful API call
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONENTFUL_ACCESS_KEY,
+  });
+
+  const res = await client.getEntries({ content_type: "latestPage" });
+
+  return {
+    props: {
+      feed,
+      latestPageContent: res.items,
+    },
+  };
+};
 
 const Latest = ({ feed, latestPageContent }) => {
   const { image, mobileImage, textTitle, text } = latestPageContent[0].fields;
