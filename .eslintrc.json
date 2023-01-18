@@ -1,35 +1,37 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@next/next/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb",
-        "plugin:@next/next/recommended"
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/button-has-type": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "@next/next/no-img-element": "off",
+    "max-len": "off",
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": "arrow-function" }
     ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "react/react-in-jsx-scope": "off",
-        "react/prop-types": "off",
-        "react/jsx-props-no-spreading": "off",
-        "react/button-has-type": "off",
-        "jsx-a11y/no-static-element-interactions": "off",
-        "jsx-a11y/click-events-have-key-events": "off",
-        "jsx-a11y/anchor-is-valid": "off",
-        "@next/next/no-img-element": "off",
-        "max-len": "off",
-        "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
-        "import/extensions": "off",
-        "import/no-unresolved": "off"
-    }
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off"
+  }
 }
