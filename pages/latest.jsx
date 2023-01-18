@@ -39,6 +39,8 @@ export const getStaticProps = async () => {
   const data = await fetch(url);
   const feed = await data.json();
 
+  console.log(feed);
+
   // Contentful API call
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
