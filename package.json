@@ -17,6 +17,8 @@
     "contentful": "^9.1.33",
     "cookies-next": "^2.1.1",
     "firebase": "^9.15.0",
+    "firebase-admin": "^11.4.1",
+    "firebase-functions": "^4.1.1",
     "framer-motion": "^6.4.3",
     "next": "12.2.0",
     "react": "18.2.0",
@@ -25,7 +27,6 @@
   },
   "devDependencies": {
     "eslint": "^8.21.0",
-    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "12.2.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",

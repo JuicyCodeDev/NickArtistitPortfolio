@@ -1,10 +1,10 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Mousewheel, Pagination, Navigation } from 'swiper';
-import useWindowHeight from '../hooks/useWindowHeight';
-import styles from '../styles/Gallery.module.css';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Mousewheel, Pagination, Navigation } from "swiper";
+import useWindowHeight from "../hooks/useWindowHeight";
+import styles from "../styles/Gallery.module.css";
 
 const Gallery = ({ paintings }) => {
   // set container height to 100vh + resize automatically
@@ -22,35 +22,34 @@ const Gallery = ({ paintings }) => {
         pagination={{
           dynamicBullets: true,
           clickable: true,
-          bulletActiveClass: 'swiper-pagination-bullet-active',
-          bulletClass: 'swiper-pagination-bullet',
+          bulletActiveClass: "swiper-pagination-bullet-active",
+          bulletClass: "swiper-pagination-bullet",
         }}
         mousewheel
         modules={[Mousewheel, Pagination, Navigation]}
         className="mySwiper"
+        cssMode={true}
       >
-        {
-          paintings.map((painting) => (
-            <SwiperSlide key={painting.sys.id}>
-              <div className={styles.painting_wrapper}>
-                <img
-                  className={styles.painting}
-                  src={`https:${painting.fields.imageFile.fields.file.url}`}
-                  alt={`A painting by Nikita Shomerus with the title ${painting.fields.title}`}
-                />
-                <div className={styles.paintingInfo}>
-                  <span className={styles.paintingName}>
-                    {painting.fields.title}
-                    &nbsp;
-                  </span>
-                  {painting.fields.size}
+        {paintings.map((painting) => (
+          <SwiperSlide key={painting.sys.id}>
+            <div className={styles.painting_wrapper}>
+              <img
+                className={styles.painting}
+                src={`https:${painting.fields.imageFile.fields.file.url}`}
+                alt={`A painting by Nikita Shomerus with the title ${painting.fields.title}`}
+              />
+              <div className={styles.paintingInfo}>
+                <span className={styles.paintingName}>
+                  {painting.fields.title}
                   &nbsp;
-                  {painting.fields.year}
-                </div>
+                </span>
+                {painting.fields.size}
+                &nbsp;
+                {painting.fields.year}
               </div>
-            </SwiperSlide>
-          ))
-        }
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
