@@ -1,13 +1,13 @@
-import { createClient } from 'contentful';
-import Gallery from '../components/Gallery.jsx';
+import { createClient } from "contentful";
+import Gallery from "../components/Gallery.jsx";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONENTFUL_ACCESS_KEY,
   });
 
-  const res = await client.getEntries({ content_type: 'painting' });
+  const res = await client.getEntries({ content_type: "painting" });
 
   return {
     props: {
@@ -16,8 +16,6 @@ export async function getStaticProps() {
   };
 }
 
-const Home = ({ paintingData }) => (
-  <Gallery paintings={paintingData} />
-);
+const Home = ({ paintingData }) => <Gallery paintings={paintingData} />;
 
 export default Home;
