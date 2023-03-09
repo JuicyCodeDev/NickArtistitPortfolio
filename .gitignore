@@ -33,3 +33,7 @@ yarn-error.log*
 
 # painting folder
 /paintings
+
+# firebase
+firebase.js
+

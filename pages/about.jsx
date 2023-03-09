@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { createClient } from 'contentful';
 import styles from '../styles/About.module.css';
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONENTFUL_ACCESS_KEY,
